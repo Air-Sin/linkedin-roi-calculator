@@ -9,8 +9,8 @@ def calculate_linkedin_roi(spent, earned):
 st.title("📊 LinkedIn ROI-Rechner")
 
 # Eingaben vom Nutzer
-spent = st.number_input("💰 Geld ausgegeben auf LinkedIn ($)", min_value=0.0, format="%.2f")
-earned = st.number_input("💵 Geld verdient durch LinkedIn ($)", min_value=0.0, format="%.2f")
+spent = st.number_input("💰 Geld ausgegeben auf LinkedIn (€)", min_value=0.0, format="%.2f")
+earned = st.number_input("💵 Geld verdient durch LinkedIn (€)", min_value=0.0, format="%.2f")
 
 if st.button("ROI berechnen"):
     result = calculate_linkedin_roi(spent, earned)
