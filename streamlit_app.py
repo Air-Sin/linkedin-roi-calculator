@@ -5,8 +5,8 @@ import os
 st.set_page_config(page_title="LinkedIn ROI-Rechner | Talify", page_icon="📊", layout="centered")
 
 # Branding: Logo & Header
-logo_path = "./assets/talify_logo.png"
-text_path = "./assets/talify_text.png"
+logo_path = "Asset 4@2x-8 (5).png"
+text_path = "Kein Titel (389 x 129 px) (389 x 129 px) (3).png"
 
 if os.path.exists(logo_path):
     st.image(logo_path, width=200)
