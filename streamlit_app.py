@@ -26,6 +26,6 @@ if st.button("📊 ROI berechnen"):
     result = calculate_linkedin_roi(spent, earned)
     st.success(result)
 
-# Footer mit Branding
+# Footer mit Branding und funktionierenden Links
 st.markdown("---")
-st.write("💡 Entwickelt von **[Talify](https://www.talify.de/)** | 🔗 [Mehr erfahren](https://www.talify.de/)")
+st.markdown("💡 Entwickelt von <strong>Talify</strong> | 🔗 <a href='https://www.talify.de/' target='_blank'>Mehr erfahren</a>", unsafe_allow_html=True)
