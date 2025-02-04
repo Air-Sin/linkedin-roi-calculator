@@ -1,11 +1,23 @@
 import streamlit as st
+import os
 
 # Branding: Seitenkonfiguration
 st.set_page_config(page_title="LinkedIn ROI-Rechner | Talify", page_icon="📊", layout="centered")
 
 # Branding: Logo & Header
-st.image("./assets/talify_logo.png", width=200)  # Talify-Logo
-st.image("./assets/talify_text.png", width=300)  # Talify-Schriftzug
+logo_path = "./assets/talify_logo.png"
+text_path = "./assets/talify_text.png"
+
+if os.path.exists(logo_path):
+    st.image(logo_path, width=200)
+else:
+    st.warning("⚠️ Talify-Logo nicht gefunden!")
+
+if os.path.exists(text_path):
+    st.image(text_path, width=300)
+else:
+    st.warning("⚠️ Talify-Schriftzug nicht gefunden!")
+
 st.title("🚀 LinkedIn ROI-Rechner")
 st.write("Berechne schnell und einfach deine LinkedIn-Marketing-Rentabilität – bereitgestellt von Talify.")
 
@@ -29,6 +41,6 @@ if st.button("📊 ROI berechnen"):
 # Footer mit Branding und funktionierenden Links
 st.markdown("---")
 st.markdown(
-    "💡 Entwickelt von **Talify** | 🔗 [Mehr erfahren](https://www.talify.de/)",
+    "💡 Entwickelt von **Talify** | 🔗 <a href='https://www.talify.de/' target='_blank'>Mehr erfahren</a>",
     unsafe_allow_html=True
 )
